@@ -120,8 +120,13 @@ svg.home_icon, svg.friends_icon{
   border-bottom: 3px solid #fff ;
 }
 
+div.nav_menu_items{
+  display: flex;
+}
+
 div.nav_links{
   display: flex;
+  
 }
 
 nav.bg-body-tertiary.navbar.navbar-expand-lg{
@@ -129,12 +134,24 @@ nav.bg-body-tertiary.navbar.navbar-expand-lg{
   padding-top: 0px;
 }
 
-svg.navbar_menu_icon{
+.navbar_menu_icon{
   background-color:  rgb(228, 227, 227);
   padding: 10px;
   box-sizing:content-box;
   border-radius: 50%;
+  margin-right: 5px;
 }
+
+li>svg.navbar_menu_icon{
+  margin: 5px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+
 
 
 
