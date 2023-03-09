@@ -55,6 +55,13 @@ div.input-form {
   height: 100%;
  }
 
+ form.edit_user{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+ }
+
 div.actions > input[type="submit"]{
   background-color: #1877f2;
 border: none;
@@ -167,6 +174,24 @@ ul.dropdown-menu.dropdown-menu-end.show{
   margin-top: 5px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+input#user_profile_picture{
+  color: red;
+}
+
+input#file-upload-button{
+  color: red;
+}
+
+div#error_explanation{
+  font-family: 'Roboto', sans-serif;
+}
+
+img.profile_image{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 
