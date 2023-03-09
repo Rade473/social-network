@@ -97,6 +97,11 @@ text-align: center;
 text-decoration: none;
 }
 
+a.link {
+  text-decoration: none;
+  color:#212529;
+}
+
 a.forgotten_password_link{
   color: #1877f2;
 font-size: 14px;
@@ -149,6 +154,19 @@ li>svg.navbar_menu_icon{
 li {
   list-style-type: none;
   padding: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ul.dropdown-menu.dropdown-menu-end.show{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 
 
