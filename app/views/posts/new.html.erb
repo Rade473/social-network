@@ -1,3 +1,19 @@
-<%= turbo_frame_tag "main" do%>
-  Content for the article!
+
+<%= turbo_frame_tag "center" do%>
+  <div class="post_creation">
+    
+  <%= form_with model: @post do |form|%>
+  <div class="field">
+    
+    <%= form.text_field :body, class: 'form-control', placeholder: 'Let your friends know whats happening' %>
+  </div>
+    <%= form.file_field :images, class: 'inputfile', multiple: true %>
+    <div class="actions">
+    <%= form.submit "Create post" %>
+  </div>
+  <%end%>
+</div>
+
+
 <%end%>
+

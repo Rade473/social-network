@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'mini_magick'
 
 class User < ApplicationRecord
 

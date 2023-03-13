@@ -10,11 +10,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    
+
     respond_to do |format|
-      if @event.save
-        format.html { redirect_to root_path, notice: "Post was successfully created." }
-        format.json { render :show, status: :created, location: @post}
+      if @post.save
+        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
@@ -23,8 +23,8 @@ class PostsController < ApplicationController
   end
 
   private
-  def post_params
-    params.equire(:post).permit(:body)
-  end
 
+  def post_params
+    params.require(:post).permit(:body, images: [])
+  end
 end

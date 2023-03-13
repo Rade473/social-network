@@ -1,4 +1,20 @@
-<%= render 'layouts/navbar'%>
-  <%= turbo_frame_tag "main" do%>
+<div class="main">
+<div class="sidemenu">
+  <%= render 'layouts/sidemenu'%>
+</div>
 
-  <%end%>
+<div class="center">
+<%# <%= turbo_frame_tag "center" do%> %>
+<%# <%end%> %>
+<% @posts.each do |post|%>
+<%= post%>
+<%# <%= turbo_frame_tag post do%>
+  <%# <%end%> %>
+  <%end%> 
+</div>
+
+
+<div class="happenings">
+  <%= render 'layouts/happenings'%>
+</div>
+</div>
