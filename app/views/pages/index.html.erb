@@ -4,12 +4,12 @@
 </div>
 
 <div class="center">
-<%# <%= turbo_frame_tag "center" do%> %>
-<%# <%end%> %>
+<%= turbo_frame_tag "center" do%> 
+<%end%>
 <% @posts.each do |post|%>
-<%= post%>
-<%# <%= turbo_frame_tag post do%>
-  <%# <%end%> %>
+<%= turbo_frame_tag post do%>
+  <%=render post%>
+  <%end%>
   <%end%> 
 </div>
 

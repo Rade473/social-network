@@ -1,6 +1,29 @@
-<%= turbo_frame_tag @post do%>
-<%# <%= @post.images.each do |img|%> %>
-<%# <% img%> %>
-<%# <%end%> %>
-<%@post.body%>
+<div class="post">
+  <div class="author">
+    <% if post.user.profile_picture.attached? %>
+    <%= image_tag post.user.profile_picture, class: 'profile_image'%>
+    <%else%>
+    <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
+    <%end%>
+    <%= post.user.name%>
+  </div>
+<div class="post_body">
+<%=post.body%>
+</div>
+<div class="post_images">
+<% post.images.each do |img|%>
+<% if post.images.count == 1%>
+<%= image_tag img.variant(resize_to_limit: [600,600])%>
+<% elsif post.images.count == 2 %>
+<%= image_tag img.variant(resize_to_limit: [300,300])%>
+<% elsif post.images.count > 2 && post.images.count < 7%>
+<%= image_tag img.variant(resize_to_limit: [200,200])%>
+<%else%>
 <%end%>
+<%end%>
+</div>
+<div class="comments">
+  Comment section here
+  <%= render post.comments %>
+</div>
+</div>

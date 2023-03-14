@@ -86,7 +86,10 @@ div.gray_line {
 
 html {
   background-color: rgb(228, 227, 227);
+}
 
+html body{
+  font-family: 'Roboto', sans-serif;
 }
 
 a.sign_up_link,
@@ -200,7 +203,7 @@ img.profile_image {
 div.main {
   display: flex;
   justify-content: space-between;
-
+  background-color: rgb(228, 227, 227);;
 }
 
 ::file-selector-button{
@@ -215,5 +218,41 @@ div.main {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 700;
-
 }
+
+div.post{
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+div.post>div.author {
+  padding: 20px;
+  padding-bottom: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+div.post>div.post_body{
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-height: 100px;
+  overflow: scroll;
+}
+
+div.post>div.post_images{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.post_images>img{
+  margin: 2px;
+}
+
+
+
+
+
