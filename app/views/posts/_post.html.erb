@@ -25,5 +25,6 @@
 <div class="comments">
   Comment section here
   <%= render post.comments %>
+  <%= render partial: 'comments/form', locals: { post: post } %>
 </div>
 </div>
