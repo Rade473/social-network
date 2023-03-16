@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_many :comments
 
+  has_many :likes
+
   def profile_picture_thumbnail
     profile_picture
   end

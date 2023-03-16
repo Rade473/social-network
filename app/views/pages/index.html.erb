@@ -4,14 +4,14 @@
 </div>
 
 <div class="center">
-<%= turbo_frame_tag "center" do%> 
+<%= turbo_frame_tag "new_post" do%> 
 <%end%>
-<% @posts.each do |post|%>
-<%= turbo_frame_tag post do%>
-  <%=render post%>
+<%= turbo_frame_tag 'posts', src: posts_path do%>
+
   <%end%>
-  <%end%> 
 </div>
+
+
 
 
 <div class="happenings">
