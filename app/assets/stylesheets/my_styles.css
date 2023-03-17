@@ -294,9 +294,6 @@ div.comment_author{
   font-weight: 700;
 }
 
-div.comment_message{
-
-}
 
 #inputComment{
   flex-grow: 1;
@@ -304,7 +301,7 @@ div.comment_message{
   border-radius: 20px;
   background-color: rgb(228, 227, 227);
   border: none;
-
+  margin-left: 7px;
 }
 
 #comment_submit_button{
@@ -313,15 +310,19 @@ div.comment_message{
 
 div.comment_input_field {
   display: flex;
+  padding: 10px;
+  padding-bottom: 0px;
 }
 
 div.comment_input_field > form {
   display: flex;
-  width: 90%;
+  width: 100%;
 }
 
 div.comments{
   padding-bottom: 20px;
+  max-height: 300px;
+  overflow: scroll;
 }
 
 

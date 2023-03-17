@@ -1,7 +1,7 @@
 <div class="single_comment">
-
 <% if comment.user.profile_picture.attached? %>
-    <%= image_tag comment.user.profile_picture, class: 'profile_image'%>
+    <img src="<%=url_for(comment.user.profile_picture)%>", class='profile_image'>
+    
     <%else%>
     <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
     <%end%>
