@@ -271,6 +271,58 @@ div.post_creation > form {
   padding: 20px;
 }
 
+div.full_comment{
+  display: flex;
+  background-color: rgb(228, 227, 227);
+  border-radius: 20px;
+  padding: 8px 12px 8px 12px;
+  flex-basis: auto;
+  overflow-y: scroll;
+  flex-direction: column;
+  max-height: 100px;
+  margin-left: 7px;
+
+}
+
+div.single_comment{
+  display: flex;
+  margin: 20px 20px 0px 15px;
+  font-size: 14px;
+}
+
+div.comment_author{
+  font-weight: 700;
+}
+
+div.comment_message{
+
+}
+
+#inputComment{
+  flex-grow: 1;
+  padding: 9px;
+  border-radius: 20px;
+  background-color: rgb(228, 227, 227);
+  border: none;
+
+}
+
+#comment_submit_button{
+  display: none;
+}
+
+div.comment_input_field {
+  display: flex;
+}
+
+div.comment_input_field > form {
+  display: flex;
+  width: 90%;
+}
+
+div.comments{
+  padding-bottom: 20px;
+}
 
 
 

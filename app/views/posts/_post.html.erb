@@ -41,9 +41,16 @@
 <%end%>
 </form>
 <div class="comments">
-
-  Comment section here
-  <%= render post.comments.order(id: :desc) %>
+  <div class="comment_input_field">
+  <div class="author">
+    <% if post.user.profile_picture.attached? %>
+    <%= image_tag post.user.profile_picture, class: 'profile_image'%>
+    <%else%>
+    <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
+    <%end%>
+    </div>
   <%= render partial: 'comments/form', locals: { post: post } %>
+  </div>
+  <%= render post.comments.order(id: :desc) %>
 </div>
 </div>
