@@ -325,5 +325,23 @@ div.comments{
   overflow: scroll;
 }
 
+#likes{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+div.like_count{
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  line-height: 3;
+}
+
+
+
+
 
 
