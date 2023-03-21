@@ -1,0 +1,8 @@
+<div class="user">
+   <% if user.profile_picture.attached? %>
+    <%= image_tag user.profile_picture, class: 'profile_image'%>
+    <%else%>
+    <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
+    <%end%>
+<%= user.name%> <%= user.surname%>
+</div>

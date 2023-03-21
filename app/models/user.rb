@@ -23,4 +23,12 @@ class User < ApplicationRecord
    ids = friends_i_sent_invitation + friends_who_sent_me_invitation
    User.where(id: ids)
   end
+
+  def friends_with?(user)
+    Invitation.confirmed_record?(id, user.id)
+  end
+
+  def send_invitation(user)
+    invitations.create(friend_id: user.id)
+  end
 end

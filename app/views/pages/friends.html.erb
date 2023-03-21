@@ -1,1 +1,6 @@
-<%= current_user.friends%>
+<div class="friends">
+<h2>Friends :</h2>
+<% current_user.friends.each do |friend| %>
+<%= render partial: 'pages/user', locals: { user: friend } %>
+<%end%>
+</div>
