@@ -6,6 +6,11 @@
 </div>
 
 <div class="pending_invitations">
+  Invitations
 <div class="from_you"></div>
-<div class="to_you"></div>
+<div class="to_you">
+  <%current_user.invitations.each do |invitation|%>
+  <%= render partial: 'invitations/invitation', locals: { invitation: invitation}%>
+  <%end%>
+</div>
 </div>

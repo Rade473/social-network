@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-  
+
   def new
     @post = Post.new
   end
@@ -23,10 +23,11 @@ class PostsController < ApplicationController
     end
   end
 
-  def close
+  def close; end
 
+  def user_posts
+    @posts = Post.where(user_id: params[:id])
   end
-
 
   private
 

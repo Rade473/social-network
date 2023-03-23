@@ -1,1 +1,43 @@
-<%=@user.name%> <%= @user.surname%>
+<div class="user_page_headline">
+<div class="personal_info">
+<% if @user.profile_picture.attached? %>
+    <img src="<%=url_for(@user.profile_picture)%>", class='profile_photo'>
+  <%else%>
+    <img src="../assets/placeholder_avatar.png" alt="" class="profile_photo">
+  <%end%>
+<div class="name_friends_info">
+<p><%=@user.name%> <%= @user.surname%></p>
+<p> <%=@user.friends.count%> Friends</p>
+</div>
+</div>
+
+<div class="profile_buttons">
+  <% if current_user == @user%>
+      <%= link_to new_post_path, data: { turbo_frame: dom_id(Post.new) }, class: 'link' do%>
+    <svg fill="currentColor" viewBox="0 0 20 20"height="20" width="20" class=""><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg> Create new post
+  <%end%>
+  <% elsif !Invitation.reacted?(current_user, @user)%>
+ <%= button_to 'Send invite', invite_path%>
+ <% elsif Invitation.reacted?(current_user, @user)%>
+ <%= button_to 'Invitation Pending', {},:disabled => true, class: 'link'%>
+  <%elsif Invitation.confirmed_record?(current_user, @user)%>
+  Your friend
+  <%end%>
+</div>
+</div>
+<div class="main">
+<div class="sidemenu">
+  <%= render 'layouts/sidemenu'%>
+</div>
+
+<div class="center">
+<%= turbo_frame_tag "new_post" do%> 
+<%end%>
+<%= turbo_frame_tag 'posts', src: user_posts_path, locals: { user: @user} do%>
+  <%end%>
+</div>
+
+<div class="happenings">
+  <%= render 'layouts/happenings'%>
+</div>
+</div>

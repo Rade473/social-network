@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :likes, only: %i[create destroy]
   get 'close', to: 'pages#close'
   get 'friends', to: 'pages#friends'
+  get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
+  post '/user/:id/send_invitation', to: 'users#new_invitation', as: 'invite'
 end

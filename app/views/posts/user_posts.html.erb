@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "posts" do%>
+<% @posts.order(id: :desc).each do |post|%>
+<%= turbo_frame_tag post, loading: 'lazy' do%>
+  <%=render post%>
+  <%end%>
+  <%end%>
+<%end%>
