@@ -4,5 +4,5 @@
     <%else%>
     <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
     <%end%>
-<%= user.name%> <%= user.surname%>
+<%= link_to "#{user.name} #{user.surname}", user_path(user) %>
 </div>

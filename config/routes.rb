@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes, only: :index
   end
-
+  get '/user/:id', to: 'users#show', as: 'user'
   resources :likes, only: %i[create destroy]
-
+  get 'close', to: 'pages#close'
   get 'friends', to: 'pages#friends'
 end

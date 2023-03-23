@@ -113,6 +113,11 @@ a.link {
   color: #212529;
 }
 
+div > a { 
+  text-decoration: none;
+  color: #212529;
+}
+
 a.forgotten_password_link {
   color: #1877f2;
   font-size: 14px;
@@ -270,6 +275,28 @@ div.post_creation > form {
   justify-content: space-around;
   padding: 20px;
 }
+
+div.post_creation > div.post_creation_heading {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+div.post_creation > div.post_creation_heading > a {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: rgb(228, 227, 227);
+  border-radius: 50%;
+
+}
+div.post_creation > div.post_creation_heading > h4 {
+ margin-bottom: 0px;
+ margin-top: 15px;
+
+}
+
 
 div.full_comment{
   display: flex;

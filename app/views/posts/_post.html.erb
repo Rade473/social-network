@@ -5,8 +5,7 @@
     <%else%>
     <img src="../assets/placeholder_avatar.png" alt="" class="profile_image">
     <%end%>
-    <%= post.user.name%>
-    <%= post.user.surname%>
+    <%= link_to "#{post.user.name} #{post.user.surname}", user_path(post.user), data: { turbo: false } %>
   </div>
 <div class="post_body">
 <%=post.body%>
