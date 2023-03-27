@@ -433,9 +433,18 @@ div.personal_info{
   display: flex;
 }
 
+div.pending_invitations{
+  background-color: rgb(228, 227, 227);;
+}
+
 div.invitation {
   display: flex;
   justify-content: space-between;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  background-color: #ffffff;
+  padding: 7px;
 }
 
 div.invitation_author{
@@ -467,6 +476,15 @@ button.accept, button.deny {
 button.deny{
   background-color:  rgb(228, 227, 227) ;
   color: #212529;
+}
+
+div.user{
+
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  background-color: #ffffff;
+  padding: 7px;
 }
 
 

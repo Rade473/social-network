@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get 'friends', to: 'pages#friends'
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
   post '/user/:id/send_invitation', to: 'users#new_invitation', as: 'invite'
+  post '/user/:id/accept_friend_request', to: 'users#accept_friend_request', as: 'accept_friend'
+  post '/user/:id/decline_friend_request', to: 'users#decline_friend_request', as: 'decline_friend'
 end

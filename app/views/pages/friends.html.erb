@@ -6,10 +6,9 @@
 </div>
 
 <div class="pending_invitations">
-  Invitations
-<div class="from_you"></div>
 <div class="to_you">
-  <%current_user.invitations.each do |invitation|%>
+  <% invites = Invitation.where(friend_id: current_user.id, confirmed: false)%>
+  <% invites.each do |invitation|%>
   <%= render partial: 'invitations/invitation', locals: { invitation: invitation}%>
   <%end%>
 </div>
